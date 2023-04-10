@@ -184,7 +184,7 @@ Tampilkan semua isi/record tabel!
 
 4. Menampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja dengan cara sebagai berikut :
 
-``MariaDB [latihan3]> select*from mahasiswa where nim=11223344;``
+``select*from mahasiswa where nim=11223344;``
 
 
 ![image](ss/ss20.png)
