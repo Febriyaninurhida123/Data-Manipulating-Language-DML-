@@ -65,7 +65,7 @@ tampiilkan tabel :
 
 tampilkan table :
 
-``desc Matakuliah;`
+``desc Matakuliah;``
 
 ![image](ss/ss8.png)
 
@@ -119,52 +119,6 @@ tampilkan table :
 
 berikut script secara keseluruhan :
 
-``CREATE TABLE Mahasiswa (
-    nim VARCHAR(10) PRIMARY KEY,
-    nama VARCHAR(255) NOT NULL,
-    jenis_kelamin ENUM('Laki-Laki', 'Perempuan'),
-    tgl_lahir DATE,
-    jalan VARCHAR(255) NOT NULL,
-    kota VARCHAR(255) NOT NULL,
-    kodepos VARCHAR(5) NOT NULL,
-    no_hp VARCHAR(15) NOT NULL,
-    kd_ds VARCHAR(10) NOT NULL,
-    FOREIGN KEY (kd_ds) REFERENCES Dosen(kd_ds)
-);
-
-CREATE TABLE Dosen (
-    kd_ds VARCHAR(10) PRIMARY KEY,
-    nama VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE Matakuliah (
-    kd_mk VARCHAR(10) PRIMARY KEY,
-    nama VARCHAR(255) NOT NULL,
-    sks INT NOT NULL
-);
-
-CREATE TABLE JadwalMengajar (
-    kd_ds VARCHAR(10) NOT NULL,
-    kd_mk VARCHAR(10) NOT NULL,
-    hari ENUM('Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu') NOT NULL,
-    jam TIME NOT NULL,
-    ruang VARCHAR(255) NOT NULL,
-    PRIMARY KEY (kd_ds, kd_mk, hari, jam),
-    FOREIGN KEY (kd_ds) REFERENCES Dosen(kd_ds),
-    FOREIGN KEY (kd_mk) REFERENCES Matakuliah(kd_mk)
-);
-
-CREATE TABLE KRSMahasiswa (
-    nim VARCHAR(10) NOT NULL,
-    kd_mk VARCHAR(10) NOT NULL,
-    kd_ds VARCHAR(10) NOT NULL,
-    semester VARCHAR(10) NOT NULL,
-    nilai FLOAT NOT NULL,
-    PRIMARY KEY (nim, kd_mk),
-    FOREIGN KEY (nim) REFERENCES Mahasiswa(nim),
-    FOREIGN KEY (kd_mk) REFERENCES Matakuliah(kd_mk),
-    FOREIGN KEY (kd_ds) REFERENCES Dosen(kd_ds)
-);``
 
 ![image](ss/ss16.png)
 
@@ -172,20 +126,34 @@ CREATE TABLE KRSMahasiswa (
 Berdasarkan table Mahasiswa pada praktikum sebelumnya:
 (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds)
 
+
 1. Isi data pada table tersebut sebanyak minimal 5 record data.
 Tampilkan semua isi/record tabel!
+
+
 • Ubah data tanggal lahir mahasiswa yang bernama Ari menjadi: 1979-08-31!
-• Tampilkan satu baris / record data yang telah diubah tadi yaitu record dengan
-nama Ari saja!
+
+
+• Tampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja!
+
+
 • Hapus Mahasiswa yang bernama Dina!
-• Tampilkan record atau data yang tanggal kelahirannya lebih dari atau sama
-dengan 1996-1-2!
-• Tampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin
-perempuan!
-• Tampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki
-atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita!
+
+
+• Tampilkan record atau data yang tanggal kelahirannya lebih dari atau sama dengan 1996-1-2!
+
+
+• Tampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin perempuan!
+
+
+• Tampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita!
+
+
 • Tampilkan data nama dan alamat mahasiswa saja dari tabel tersebut
+
+
 • Tampilkan data mahasiswa terurut berdasarkan nama.
+
 
 1. Mengisi tabel dengan minimal 5 record data :
 
