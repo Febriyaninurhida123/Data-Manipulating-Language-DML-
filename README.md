@@ -282,6 +282,11 @@ atau untuk memfilter data gunakan perintah :
 ``SELECT * FROM WHERE <kondisi>``
 
 
+![image](ss/ss31.png)
+
+
+
+
 3. mengubah data :
 
 ``UPDATE <table> SET field1=val1, ..., fieldn=valn WHERE <kondisi>``
