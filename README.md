@@ -2,7 +2,7 @@
 
 ## Praktikum 1
 
-Data Model Mapping
+#### Data Model Mapping
 
 Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds)
 
@@ -15,7 +15,7 @@ JadwalMengajar (kd_ds, kd_mk, hari, jam, ruang)
 KRSMahasiswa (nim, kd_mk, kd_ds, semester, nilai)
 
 
-Tugas Praktikum
+### Tugas Praktikum
 
 • Buat DDL Script berdasarkan skema ERD tersebut diatas.
 • Jalankan script DDL tersebut pada DBMS MySQL.
@@ -33,7 +33,7 @@ tampilkan hasil table :
 ``desc mahasiswa;``
 
 
-![image](ss/ss1.png)
+![image](ss/ss6.png)
 
 2. buat script untuk table dosen :
 
@@ -50,7 +50,7 @@ tampiilkan tabel :
 
 ``desc dosen;``
 
-![image](ss/ss2.png)
+![image](ss/ss7.png)
 
 3. buat script untuk mata kuliah :
 
@@ -67,7 +67,7 @@ tampilkan table :
 
 ``desc Matakuliah;`
 
-![image](ss/ss3.png)
+![image](ss/ss8.png)
 
 4. buat script untuk jadwal mengajar :
 
@@ -91,7 +91,7 @@ tampilkan table :
 ``desc JadwalMengajar;``
 
 
-![image](ss/ss4.png)
+![image](ss/ss9.png)
 
 
 5. buat script untuk KRSMahasiswa :
@@ -115,7 +115,7 @@ tampilkan table :
 ``desc KRSMahasiswa;``
 
 
-![image](ss/ss5.png)
+![image](ss/ss10.png)
 
 berikut script secara keseluruhan :
 
