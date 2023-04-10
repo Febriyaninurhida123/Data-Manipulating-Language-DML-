@@ -315,8 +315,12 @@ contoh :
 
 * Apa bedanya penggunaan BETWEEN dan penggunaan operator >=
 dan <= ?
+
 • (misal: tgl_lahir BETWEEN '1990-10-10' AND '1992-10-11')
+
+
 • (misal: tgl_lahir >= '1990-10-10' AND tgl_lahir <= '1992-10-11')
+
 
 jawab : 
 
